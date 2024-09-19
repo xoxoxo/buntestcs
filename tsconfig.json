@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir":"./dist/",
+    "noImplicitAny":false,
+    "module":"esnext",
+    "target":"es2021",
+    "allowJs":true,
+    "moduleResolution":"bundler",
+    "allowSyntheticDefaultImports":true,
+    "declaration": true,
+    "isolatedModules": true,
+    "importHelpers": true,
+    "lib": ["esnext", "es2021","dom"],
+    "noEmit": false,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": "./app",
+    "sourceMap": true
+  },
+  "include": ["app/**/**/*","svg.d.ts"],
+  "exclude": [
+    "node_modules"
+  ]
+}
