@@ -1,10 +1,19 @@
-const express = require("express");
+import express from 'express';
 const app = express();
-const requireBundle = require(`./build/main.server.js`);
+
 
 app.use(express.static("build"));
-app.get("/", (req, res, next) => {
+app.get("/", async (req, res, next) => {
+  // await Bun.build({
+  //   entrypoints: ['./app/appGeneral.tsx'],
+  //   outdir: './out',
+  //   target: 'node', // default
+  // })
+  
   try {
+
+    // const requireBundle = await import(`./out/appGeneral.js`);
+    const requireBundle = await import(`./build/main.server.js`);
 
     const render = requireBundle.App.default();
 
