@@ -15,7 +15,7 @@ app.get("/", async (req, res, next) => {
     const requireBundle = await import(`./out/appGeneral.js`);
     // const requireBundle = await import(`./build/main.server.js`);
 
-    const render = requireBundle.App.default();
+    const render = requireBundle.default();
 
     return res.status(200).send(`
       ${render.styleTags}
