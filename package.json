@@ -1,7 +1,6 @@
 {
   "name": "my-project",
   "module": "index.ts",
-  "type": "module",
   "scripts": {
     "build": "webpack --config ./build.webpack.js"
   },
